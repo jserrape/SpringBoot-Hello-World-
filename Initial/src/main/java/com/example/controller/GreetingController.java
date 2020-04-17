@@ -1,10 +1,12 @@
-package com.example.restservice;
+package com.example.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.restservice.Greeting;
 
 @RestController
 public class GreetingController {
