@@ -1,13 +1,13 @@
-package com.HelloWordSpring.HelloWordSpring;
+package com.example.HelloWorld;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HelloWordSpringApplication {
+public class HelloWorldApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloWordSpringApplication.class, args);
+		SpringApplication.run(HelloWorldApplication.class, args);
 	}
 
 }
