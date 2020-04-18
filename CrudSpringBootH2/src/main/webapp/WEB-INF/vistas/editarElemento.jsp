@@ -11,20 +11,24 @@
 </head>
 <body>
 	<div class="container mt-4">
-		<form action="/agregarCatalogo" method="POST" class="col-sm-5">
+		<form action="/actualizarElemento" method="POST" class="col-sm-5">
 			<div class="card">
 				<div class="card-header">
-					<h4>Agregar Catalogo</h4>
+					<h4>Actualizar Elemento</h4>
 				</div>
-				<div class="card-body">					
+				<div class="card-body">
 					<div class="form-group">
-						<label>TIPO</label> <input type="text" name="tipo"
-							class="form-control">
+						<label>ID</label> <input type="text" name="id"
+							class="form-control" value="${elemento.id}" readonly="readonly">
+					</div>
+					<div class="form-group">
+						<label>CADENA</label> <input type="text" name="cadena"
+							class="form-control" value="${elemento.cadena}">
 					</div>
 				</div>
 				<div class="card-footer">
-					<input type="submit" value="Guardar" class="btn btn-info" /> <a
-						href="/listarCatalogo" class="btn btn-link">Regresar</a>
+					<input type="submit" value="Actualizar" class="btn btn-info" /> <a
+						href="/listarElemento" class="btn btn-link">Regresar</a>
 				</div>
 			</div>
 		</form>

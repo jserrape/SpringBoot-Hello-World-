@@ -17,13 +17,22 @@ public class CrudSpringBootH2Application implements CommandLineRunner  {
 	}
 
 	public void run(String... args) throws Exception {
+		//Catalogo
 		template.execute("DROP TABLE CATALOGO IF EXISTS");
 		template.execute("CREATE TABLE CATALOGO(id INTEGER(11) PRIMARY KEY auto_increment,tipo VARCHAR(255))");
 		
-
 		template.update("insert into catalogo(tipo)values('Dirección')");
 		template.update("insert into catalogo(tipo)values('Sexo')");
 		
+		//Elementos
+		template.execute("DROP TABLE ELEMENTO IF EXISTS");
+		template.execute("CREATE TABLE ELEMENTO(id INTEGER(11) PRIMARY KEY auto_increment, nombre_catalogo VARCHAR(255), cadena VARCHAR(255))");
+		
+		template.update("insert into elemento(nombre_catalogo,cadena)values('Dirección','Valencia')");
+		template.update("insert into elemento(nombre_catalogo,cadena)values('Dirección','Aragón')");
+		template.update("insert into elemento(nombre_catalogo,cadena)values('Dirección','Cataluña')");
+		template.update("insert into elemento(nombre_catalogo,cadena)values('Sexo','Hombre')");
+		template.update("insert into elemento(nombre_catalogo,cadena)values('Sexo','Mujer')");
 	}
 
 }

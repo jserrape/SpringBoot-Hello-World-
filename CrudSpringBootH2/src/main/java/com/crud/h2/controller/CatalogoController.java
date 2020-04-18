@@ -18,39 +18,39 @@ public class CatalogoController {
 	@Autowired
 	private ICatalogoService service;
 	
-	@RequestMapping("/listar")
+	@RequestMapping("/listarCatalogo")
 	public String listar(Model model) {		
 		model.addAttribute("catalogos",service.listar());
 		return "indexCatalogo";
 	}	
 	
-	@GetMapping("/nuevo")
+	@GetMapping("/nuevoCatalogo")
 	public String nuevo() {
 		return "agregarCatalogo";
 	}
-	@PostMapping("/agregar")
+	@PostMapping("/agregarCatalogo")
 	public String agregar(@Valid Catalogo p) {
 		service.agregar(p);
-		return "redirect:/listar";
+		return "redirect:/listarCatalogo";
 	}
 	
-	@GetMapping("/editar/{id}")
+	@GetMapping("/editarCatalogo/{id}")
 	public String editar(@PathVariable int id, Model model) {
 		Catalogo catalogo=service.listCatalogoId(id);
 		model.addAttribute("catalogo", catalogo);
 		return "editarCatalogo";
 	}
 	
-	@PostMapping("/actualizar")
+	@PostMapping("/actualizarCatalogo")
 	public String actualizar(@Valid Catalogo p) {
 		service.editar(p);
-		return "redirect:/listar";
+		return "redirect:/listarCatalogo";
 	}
 	
-	@GetMapping("/eliminar/{id}")
+	@GetMapping("/eliminarCatalogo/{id}")
 	public String delete(@PathVariable int id) {
 		service.delete(id);
-		return "redirect:/listar";
+		return "redirect:/listarCatalogo";
 	}
 	
 	

@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="container mt-4">
-		<form action="/actualizar" method="POST" class="col-sm-5">
+		<form action="/actualizarCatalogo" method="POST" class="col-sm-5">
 			<div class="card">
 				<div class="card-header">
 					<h4>Actualizar Catalogo</h4>
@@ -28,7 +28,7 @@
 				</div>
 				<div class="card-footer">
 					<input type="submit" value="Actualizar" class="btn btn-info" /> <a
-						href="/listar" class="btn btn-link">Regresar</a>
+						href="/listarCatalogo" class="btn btn-link">Regresar</a>
 				</div>
 			</div>
 		</form>

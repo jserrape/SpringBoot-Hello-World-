@@ -11,20 +11,28 @@
 </head>
 <body>
 	<div class="container mt-4">
-		<form action="/agregarCatalogo" method="POST" class="col-sm-5">
+		<form action="/agregarElemento" method="POST" class="col-sm-5">
 			<div class="card">
 				<div class="card-header">
-					<h4>Agregar Catalogo</h4>
+					<h4>Agregar Elemento</h4>
 				</div>
-				<div class="card-body">					
+				<div class="card-body">
 					<div class="form-group">
-						<label>TIPO</label> <input type="text" name="tipo"
+						<label>CATALOGO</label> <select class="form-control"
+							name="nombre_catalogo">
+							<c:forEach var="catalogo" items="${catalogos}">
+								<option value="${catalogo.tipo}">${catalogo.tipo}</option>
+							</c:forEach>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>CADENA</label> <input type="text" name="cadena"
 							class="form-control">
 					</div>
 				</div>
 				<div class="card-footer">
 					<input type="submit" value="Guardar" class="btn btn-info" /> <a
-						href="/listarCatalogo" class="btn btn-link">Regresar</a>
+						href="/listarElemento" class="btn btn-link">Regresar</a>
 				</div>
 			</div>
 		</form>
