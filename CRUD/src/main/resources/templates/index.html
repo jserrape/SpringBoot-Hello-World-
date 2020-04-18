@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container mt-4">
+		<table class="table">
+			<thead>
+				<tr>
+					<td>ID</td>
+					<td>NAME</td>
+					<td>TLF</td>
+					<td>ACTIONS</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="person:${persons}">
+					<td>${persona.id}</td>
+					<td>${persona.name}</td>
+					<td>${persona.tlf}</td>
+					<td>
+						<a>Edit</a>
+						<a>Delete</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>
