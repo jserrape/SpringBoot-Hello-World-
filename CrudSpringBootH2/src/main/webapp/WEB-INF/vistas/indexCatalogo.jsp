@@ -28,6 +28,7 @@
 						<td class="text-center">${catalogo.id}</td>
 						<td>${catalogo.tipo}</td>
 						<td class="text-center">
+						<a href="/verCatalogo/${catalogo.tipo}" class="btn btn-primary">Ver catálogo</a>
 						<a href="/editarCatalogo/${catalogo.id}" class="btn btn-warning">Editar</a>
 						<a href="/eliminarCatalogo/${catalogo.id}" class="btn btn-danger">Eliminar</a>
 						</td>
