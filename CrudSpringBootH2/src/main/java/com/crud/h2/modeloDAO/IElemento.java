@@ -8,6 +8,8 @@ import com.crud.h2.modelo.Elemento;
 public interface IElemento {
 	
 	public List<Elemento> listar();
+	
+	public List<Elemento> listarPorTipo(String tipo);
 
 	public Elemento listElementoId(int id);
 

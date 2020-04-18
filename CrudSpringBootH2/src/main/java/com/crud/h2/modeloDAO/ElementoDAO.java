@@ -22,6 +22,12 @@ public class ElementoDAO implements IElemento {
 		return elementos;
 	}
 	
+	public List<Elemento> listarPorTipo(String tipo) {
+		String sql = "select * from elemento WHERE nombre_catalogo='" + tipo + "'";
+		List<Elemento> elementos = template.query(sql, new BeanPropertyRowMapper<Elemento>(Elemento.class));
+		return elementos;
+	}
+	
 	public Elemento listElementoId(int id) {
 		String sql="select * from elemento where id=?";
 		Elemento per=template.queryForObject(sql,new Object[] {id},new BeanPropertyRowMapper<Elemento>(Elemento.class));

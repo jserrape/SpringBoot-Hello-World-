@@ -18,6 +18,10 @@ public class ElementoService implements IElementoService {
 	public List<Elemento> listar() {
 		return dao.listar();
 	}
+	
+	public List<Elemento> listarPorTipo(String tipo) {
+		return dao.listarPorTipo(tipo);
+	}
 
 	public Elemento listElementoId(int id) {
 		return dao.listElementoId(id);

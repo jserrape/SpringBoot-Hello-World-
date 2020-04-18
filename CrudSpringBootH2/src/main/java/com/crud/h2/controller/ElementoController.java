@@ -31,7 +31,13 @@ public class ElementoController {
 		model.addAttribute("elementos",service.listar());
 		return "indexElemento";
 		//return service.listar();
-	}	
+	}
+	
+	@GetMapping("/verCatalogo/{tipo}")
+	public String listarCatalogo(@PathVariable String tipo, Model model) {
+		model.addAttribute("elementos",service.listarPorTipo(tipo));
+		return "indexElemento";
+	}
 	
 	@GetMapping("/nuevoElemento")
 	public String nuevo(Model model) {
