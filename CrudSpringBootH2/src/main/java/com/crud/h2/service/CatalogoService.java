@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.crud.h2.modelo.Catalogo;
 import com.crud.h2.modeloDAO.ICatalogo;
@@ -25,6 +26,10 @@ public class CatalogoService implements ICatalogoService {
 	public int agregar(Catalogo p) {
 		dao.agregar(p);
 		return 0;
+	}
+	
+	public void rellenarCatalogo(Catalogo p, MultipartFile file) {
+		dao.rellenarCatalogo(p, file);
 	}
 
 	public int editar(Catalogo p) {

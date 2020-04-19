@@ -11,20 +11,22 @@
 </head>
 <body>
 	<div class="container mt-4">
-		<form action="/agregarCatalogo" method="POST" class="col-sm-5">
+		<form action="/agregarCatalogo" method="POST" class="col-sm-5" enctype="multipart/form-data">
 			<div class="card">
 				<div class="card-header">
 					<h4>Agregar Catalogo</h4>
 				</div>
 				<div class="card-body">					
 					<div class="form-group">
-						<label>TIPO</label> <input type="text" name="tipo"
-							class="form-control">
+						<label>TIPO</label> <input type="text" name="tipo" class="form-control">
+					</div>
+					<div class="form-group">
+						<label>FILE</label> <input type="file" name="file" class="form-control"/>
 					</div>
 				</div>
 				<div class="card-footer">
-					<input type="submit" value="Guardar" class="btn btn-info" /> <a
-						href="/listarCatalogo" class="btn btn-link">Regresar</a>
+					<input type="submit" value="Guardar" class="btn btn-info" /> 
+					<a href="/listarCatalogo" class="btn btn-link">Regresar</a>
 				</div>
 			</div>
 		</form>
