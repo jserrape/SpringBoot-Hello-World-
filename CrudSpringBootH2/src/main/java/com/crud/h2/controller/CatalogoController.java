@@ -28,6 +28,7 @@ public class CatalogoController {
 	public String nuevo() {
 		return "agregarCatalogo";
 	}
+	
 	@PostMapping("/agregarCatalogo")
 	public String agregar(@Valid Catalogo p) {
 		service.agregar(p);
@@ -52,8 +53,5 @@ public class CatalogoController {
 		service.delete(id);
 		return "redirect:/listarCatalogo";
 	}
-	
-	
-	
 
 }
