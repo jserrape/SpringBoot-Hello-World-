@@ -51,17 +51,23 @@ public class CatalogoDAO implements ICatalogo {
 		}
 	}
 
-	
 	public int editar(Catalogo p) {
 		String sql="update catalogo set tipo=? where id=?";
 		int res=template.update(sql,p.getTipo(),p.getId());
 		return res;
 	}
 
-	
 	public void delete(int id) {
+		//Obtengo el catalogo antes de eliminarlo
+		String sqlCat="select * from catalogo where id=?";
+		Catalogo per=template.queryForObject(sqlCat, new Object[] {id},new BeanPropertyRowMapper<Catalogo>(Catalogo.class));
+		
 		String sql="delete from catalogo where id=?";
 		template.update(sql,id);
+
+		//Elimino los elementos del catalogo
+		String sqlElemnto="delete from elemento where nombre_catalogo=?";
+		template.update(sqlElemnto,per.getTipo());
 	}
 
 }

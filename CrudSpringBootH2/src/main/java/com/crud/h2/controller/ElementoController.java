@@ -69,8 +69,6 @@ public class ElementoController {
 		service.delete(id);
 		return "redirect:/listarElemento";
 	}
-	
-	
-	
+
 
 }

@@ -29,7 +29,7 @@ public class CrudSpringBootH2Application implements CommandLineRunner  {
 		template.execute("CREATE TABLE ELEMENTO(id INTEGER(11) PRIMARY KEY auto_increment, nombre_catalogo VARCHAR(255) NOT NULL, cadena VARCHAR(255))");
 		
 		template.update("insert into elemento(nombre_catalogo,cadena)values('Direccion','Valencia')");
-		template.update("insert into elemento(nombre_catalogo,cadena)values('Direccion','Aragón')");
+		template.update("insert into elemento(nombre_catalogo,cadena)values('Direccion','Aragon')");
 		template.update("insert into elemento(nombre_catalogo,cadena)values('Direccion','Cataluña')");
 		template.update("insert into elemento(nombre_catalogo,cadena)values('Sexo','Hombre')");
 		template.update("insert into elemento(nombre_catalogo,cadena)values('Sexo','Mujer')");
