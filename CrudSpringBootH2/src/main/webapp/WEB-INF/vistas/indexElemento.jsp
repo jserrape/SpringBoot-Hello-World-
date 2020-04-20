@@ -11,8 +11,6 @@
 </head>
 <body>
 	<div class="container mt-4">
-	<a href="/nuevoElemento" class="btn btn-success">Agregar Nuevo</a>
-	<br>
 	<br>
 		<table class="table">
 			<thead>
@@ -30,8 +28,7 @@
 						<td>${elemento.nombre_catalogo}</td>
 						<td>${elemento.cadena}</td>
 						<td class="text-center">
-						<a href="/editarElemento/${elemento.id}" class="btn btn-warning">Editar</a>
-						<a href="/eliminarElemento/${elemento.id}" class="btn btn-danger">Eliminar</a>
+							<a href="/eliminarElemento/${elemento.id}" class="btn btn-danger">Eliminar</a>
 						</td>
 					</tr>
 				</c:forEach>

@@ -7,7 +7,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.crud.h2.modelo.Catalogo;
 import com.crud.h2.modelo.Elemento;
 
 @Repository

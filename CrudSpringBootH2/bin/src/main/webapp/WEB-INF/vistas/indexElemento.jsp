@@ -11,23 +11,27 @@
 </head>
 <body>
 	<div class="container mt-4">
+	<a href="/nuevoElemento" class="btn btn-success">Agregar Nuevo</a>
+	<br>
 	<br>
 		<table class="table">
 			<thead>
 				<tr class="text-center">
 					<th>ID</th>
-					<th>TIPO</th>
+					<th>CATALOGO</th>
+					<th>CADENA</th>
 					<th>ACCION</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="catalogo" items="${catalogos}">
+				<c:forEach var="elemento" items="${elementos}">
 					<tr>
-						<td class="text-center">${catalogo.id}</td>
-						<td>${catalogo.tipo}</td>
+						<td class="text-center">${elemento.id}</td>
+						<td>${elemento.nombre_catalogo}</td>
+						<td>${elemento.cadena}</td>
 						<td class="text-center">
-						<a href="/verCatalogo/${catalogo.tipo}" class="btn btn-primary">Ver catálogo</a>
-						<a href="/eliminarCatalogo/${catalogo.id}" class="btn btn-danger">Eliminar</a>
+						<a href="/editarElemento/${elemento.id}" class="btn btn-warning">Editar</a>
+						<a href="/eliminarElemento/${elemento.id}" class="btn btn-danger">Eliminar</a>
 						</td>
 					</tr>
 				</c:forEach>

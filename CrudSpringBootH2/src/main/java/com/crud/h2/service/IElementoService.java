@@ -2,7 +2,6 @@ package com.crud.h2.service;
 
 import java.util.List;
 
-import com.crud.h2.modelo.Catalogo;
 import com.crud.h2.modelo.Elemento;
 
 public interface IElementoService {

@@ -7,6 +7,12 @@ public class Catalogo {
 	public Catalogo() {
 	}
 
+	public Catalogo(String tipo) {
+		super();
+		this.id = -1;
+		this.tipo = tipo;
+	}
+	
 	public Catalogo(int id, String tipo) {
 		super();
 		this.id = id;

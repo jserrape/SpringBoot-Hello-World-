@@ -11,6 +11,8 @@
 </head>
 <body>
 	<div class="container mt-4">
+	<a href="/nuevoCatalogo" class="btn btn-success">Agregar Nuevo</a>
+	<br>
 	<br>
 		<table class="table">
 			<thead>
@@ -27,6 +29,7 @@
 						<td>${catalogo.tipo}</td>
 						<td class="text-center">
 						<a href="/verCatalogo/${catalogo.tipo}" class="btn btn-primary">Ver catálogo</a>
+						<a href="/editarCatalogo/${catalogo.id}" class="btn btn-warning">Editar</a>
 						<a href="/eliminarCatalogo/${catalogo.id}" class="btn btn-danger">Eliminar</a>
 						</td>
 					</tr>
